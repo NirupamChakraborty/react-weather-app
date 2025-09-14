@@ -1,0 +1,87 @@
+/* index.css */
+
+/* Smooth page load */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  color: #fff;
+  overflow-x: hidden;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+
+/* Headings */
+h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  animation: popIn 1s ease-in-out;
+}
+
+
+
+
+/* Buttons */
+button, .MuiButton-contained {
+  background: linear-gradient(135deg, #2196f3, #21cbf3) !important;
+  color: white !important;
+  font-weight: bold !important;
+  border-radius: 25px !important;
+  padding: 10px 25px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1.8s ease-in-out;
+}
+
+button:hover, .MuiButton-contained:hover {
+  transform: scale(1.08) rotate(-1deg);
+  box-shadow: 0px 8px 25px rgba(33, 150, 243, 0.6);
+}
+
+/* Cards */
+.MuiCard-root {
+  border-radius: 20px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(12px);
+  animation: float 4s ease-in-out infinite, fadeInUp 2s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* 🌟 Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
